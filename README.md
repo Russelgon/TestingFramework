@@ -14,25 +14,25 @@ Example of testing framework with API and UI tests
 │   │       ├── java
 │   │       │   └── asana.e2e.core
 │   │       │       ├──  baseTech
-│   │       │       │   ├──  logger
-│   │       │       │   └── readers
+│   │       │       │    ├──  logger
+│   │       │       │    └── readers
 │   │       │       ├──  web
-│   │       │       │   ├──  asserts
-│   │       │       │   ├──  browsers
-│   │       │       │   ├──  pages
-│   │       │       │   └── webSteps.generated.steps
+│   │       │       │    ├──  asserts
+│   │       │       │    ├──  browsers
+│   │       │       │    ├──  pages
+│   │       │       │    └── webSteps.generated.steps
 │   │       │       └── api
 │   │       │           └── tech
 │   │       │               ├── asserts
 │   │       │               ├──  constructors
 │   │       │               ├──  data
-│   │       │               │   └── user
+│   │       │               │    └── user
 │   │       │               ├──  enums
 │   │       │               ├──  http
 │   │       │               ├──  matchers.createProject
-│   │       │               │   ├── baseCreateProjectMatchers
-│   │       │               │   ├── requestMatcher
-│   │       │               │   └── responseMathcer
+│   │       │               │    ├── baseCreateProjectMatchers
+│   │       │               │    ├── requestMatcher
+│   │       │               │    └── responseMathcer
 │   │       │               └── tests
 │   │       │        
 │   │       └── resources
