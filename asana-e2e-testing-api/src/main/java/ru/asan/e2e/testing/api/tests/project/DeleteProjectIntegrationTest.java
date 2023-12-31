@@ -24,8 +24,7 @@ public class DeleteProjectIntegrationTest extends ApiBaseTest {
 
     @Test
     @Name("TEST_3. Api. Delete. Delete project in Asana")
-    public void TEST_3_Api__Delete__Delete_project_in_Asana()
-            throws IOException, URISyntaxException, InterruptedException {
+    public void TEST_3_Api__Delete__Delete_project_in_Asana() {
 
         // Step 1.1 Data preparation
         ProjectUser projectUser = DataLoaderApi.projectUser();
@@ -46,8 +45,7 @@ public class DeleteProjectIntegrationTest extends ApiBaseTest {
 
     @Test
     @Name("TEST_4. Api. Delete. Not correct ID when trying to delete project in Asana")
-    public void TEST_4_Api__Delete__Delete_project_in_Asana_with_not_correct_ID()
-            throws IOException, URISyntaxException, InterruptedException {
+    public void TEST_4_Api__Delete__Delete_project_in_Asana_with_not_correct_ID() {
 
         // Step 1.1 Data preparation
         ProjectUser projectUser = DataLoaderApi.projectUser();
