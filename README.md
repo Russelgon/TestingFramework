@@ -3,6 +3,49 @@
 Example of testing framework with API and UI tests
 
 ---
+### ⚙️ Engine ⚙️
+The standard HttpClient library in Java 11 was used for API testing, and it was augmented with logging from slf4j.
+``` java 
+    /**
+     * Executes a POST request to create a project in Asana API.
+     *
+     * @param requestBody the request body containing the project data
+     * @param projectUser the user associated with the project
+     * @return the HTTP response containing the result of the request
+     */
+    @SneakyThrows
+    private static HttpResponse<String> asanaExecuteCreateProject(ProjectRequest requestBody,
+            ProjectUser projectUser) {
+
+        var bodyValue = objectMapper.writeValueAsString(requestBody);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI(ASANA_API_PROJECTS))
+                .header(AUTHORIZATION_HEADER, BEARER_HEADER + projectUser.getToken())
+                .header(CONTENT_TYPE_HEADER, JSON_HEADER)
+                .POST(ofString(bodyValue))
+                .build();
+        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+        httpLogger(response, request, bodyValue);
+        return response;
+    }
+```
+
+
+### 🔗 libraries 🔗
+
+This project utilizes the following libraries:
+
+1. JUnit: A popular testing framework for Java.
+2. Hamcrest: A library of matchers for building test expressions.
+3. Selenoid: A powerful implementation of Selenium hub using Docker containers.
+4. Selenium: A web application testing framework that enables automated web testing.
+5. Jackson: A high-performance JSON processor for Java.
+6. Awaitility: A library for testing asynchronous systems in Java.
+
+These libraries are used to support various testing and automation functionalities within the project.
+
+---
 
 ### 🗂️ Project Structure 🗂️
 
